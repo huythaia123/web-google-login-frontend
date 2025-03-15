@@ -1,12 +1,7 @@
 import { Outlet } from 'react-router'
 
 const AuthLayout = () => {
-  return (
-    <div>
-      <p>AuthLayout</p>
-      <Outlet />
-    </div>
-  )
+  return <Outlet />
 }
 
 export default AuthLayout

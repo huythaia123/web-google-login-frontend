@@ -1,8 +1,7 @@
-import { useEffect } from 'react'
-import env from '../../configs/env'
 import axiosInstance from '../../configs/axiosConfig'
 import { useGoogleLogin } from '@react-oauth/google'
 import toast from 'react-hot-toast'
+import { FcGoogle } from 'react-icons/fc'
 
 declare global {
   interface Window {
@@ -36,9 +35,10 @@ const GoogleLoginButton = () => {
   return (
     <button
       onClick={() => handleLogin()}
-      className="cursor-pointer bg-blue-600 p-4 text-white"
+      className="mt-6 flex w-full cursor-pointer items-center justify-center gap-2 rounded border border-gray-200 bg-white py-3 font-medium text-black transition-all hover:bg-blue-50/50"
     >
-      Continue with Google
+      <FcGoogle className="text-2xl" />
+      <span>Đăng nhập với Google</span>
     </button>
   )
 }
